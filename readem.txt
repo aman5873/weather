@@ -1,0 +1,55 @@
+MERN = Mongo + Express + React + Node
+Development = Node.js server + React server (basically fake)
+Production = Node.js + static react files
+
+Mongoose -> sits on top of mongoDB native driver (mongodb) -> rich developer experience
+Database => collection(s)
+collection -> Document(s)
+Document -> JSON-like -> key value
+
+mongodb community server*
+your process (node) + MongoDB (ON CLOUD/SERVER) => Sockets (TCP) 
+
+
+MEN(excluding React)
+
+1. server = in directory 
+     1. npm init -y || npm init (for automatically-initialize/ initialize project and package.json)
+     2. npm add/install express ()
+     3. Make directories & Files :
+        (i) mkdir src => app.js (main-express file)
+        (ii) mkdir public => index.html(default routing-> static page) , mkdir css & images (public folder)
+
+     4. npm add nodemon (auto run server when changes detected)
+        (i) add script in package.jason, "dev" : "nodemon src/app.js -e js,hbs" => npm run dev (the script will run)
+     
+     5. npm install mongoose => DB interface
+          (i) cd src => mkdir models(connection.js),db(table/schema.js)
+
+     6. nmp install hbs => Handlebars-Template
+          (i) mkdir templates
+          (ii) mkdir partials => create .hbs file (includes header template i.e containing repeted code)
+          (ii) views => create .hbs file (includes header template i.e containing repeted code) Default Routing template-path for templates is views;
+          // in app.js set static_path,template_path,partials_path; set-> view_engine,views; registerPartials;
+     
+     
+
+
+
+
+
+//MERN
+1. npx create-react-app client => cd client => npm start
+2. server = in directory 
+     1. npm init (for node project inirialization)
+     2. npm install express ()
+     3. npm install nodemon (auto run server when changes detected)
+        (i) add script in package.jason, "dev" : "nodemon src/app.js -e js,hbs" => npm run dev (the script will run)
+     4. npm install mongoose => DB interface
+     5. add npm cors
+
+
+///// GIT
+1. git init => initialize current directory
+2. git add / git add . => ad changes in working directory to the staging area.
+3. 

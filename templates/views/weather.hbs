@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+</head>
+
+<body>
+    {{>navbar}}
+<!-- Main Header -->
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                    <div class="row">
+                        <!--  Right side Div  -->
+                        <div class="col-md-7 col-12 mx-auto ">
+                            <div class="main_content">
+                                <form action="" class="temp_form">
+                                    <input type="text" name="--" id="cityName" placeholder="Enter city name" autocomplete="off">
+                                    <input type="submit" value="search" id="submitBtn">
+                                </form>
+                            </div>   
+                            <div class="tempratureInfo">
+                                <div class="top_layer">
+                                    <p id="day">day</p>
+                                    <p id="date">date</p>
+                                </div>
+                                <div class="main_layer">
+                                    <p id="city">Weather Info</p>
+                                    <div class="middle_layer data_hide">
+                                        <p id="temp"> 
+                                            <span id="temp_val">0</span>
+                                            <sup>o</sup>C
+                                        </p>
+                                        <p id="temp_status"> <i class="fa fa-cloud arial-hidden="true"></i></p>
+                                    </div>
+
+                                </div>
+                                <div class="bottom_layer data_hide" >
+                                    <p> Pressure : <span id="pressure">0</span> hPa </p>                                
+                                    <p> Humidity : <span id="humidity">0</span> % </p>                                
+                                    <p> Wind : <span id="wind"></span> KMPH</p>  
+                                </div>
+                            
+                            </div>       
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{{>script}}
+
+<script src="js/main.js"></script>
+<script>
+getCurrentDay();
+getCurrentDate();
+</script>
+
+
+</body>
+{{>footer}}
+</html>

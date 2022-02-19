@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.root{
+    --main-bg : #1e272e;
+    --main-color :#4ec1e3;
+}
+
+/* responsive using one line of code */
+.html{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    margin: 0;
+}
+
+.main_menu{
+    background-color: var(--main-bg);
+}
+
+.navbar  {
+    background-color: var(--main-bg);
+    padding: 1rem 0;
+
+}
+.navbar li {
+    margin-left: 1rem;
+} 
+.navbar-nav{
+    margin-left: auto;
+}
+
+.navbar .nav-link.active:hover, .navbar-dark .navbar-brand span:hover{
+  
+    color :#4ec1e3;
+}
+
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    /* color: #0097e6; */
+}
+
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.main_header_left {
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+}
+
+.main_header_left h2{
+    font-size: 2.5rem; 
+    margin: 1 rem 0 2rem 0;
+    text-transform: capitalize;
+
+}
+.main_header_left button{
+   border:none;
+   padding: 0.5rem 1.5rem;
+   font-size: 1rem;
+   border-radius: 1.5rem;
+   text-transform : uppercase;
+   box-shadow: 0 8px 6px -6px;
+   
+   
+}
+.main_header_left button:hover{
+    box-shadow: 0 18px 6px -6px var(--main-color) ;
+    color :#4ec1e3;
+    
+}
+.main_header_right {
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+    align-items: flex-end;
+} 
+
+.main_header_right figure img{
+    /* box-shadow: 0 18px 6px -6px var(--main-color) ; */
+    filter: drop-shadow(0 0.5rem 11rem rgba(44, 179, 224, 0));
+    border-radius: 70px;
+
+}
+
+.img1{
+    width:auto;
+    height: 20rem;
+}
+
+
+
+
+/* res[onsive */
+@media (max-width: 768px) {
+    .main_header_right{
+        height: auto;
+        margin: 5rem 0;
+        margin-left: 2rem;
+        align-items: flex-start;
+    }
+    .main_header_left{
+        height: auto;
+        margin-top: 1rem ;
+        margin-bottom: 3rem ;
+    }
+    .main_layer .middle_layer p, .main_layer .middle_layer .fa {
+        font-size: 4rem;
+        font-weight: 550;
+    }
+    .sup{
+        font-size: 3.3rem;
+    }
+    
+}
+
+
+
+/* Temprature details */
+.tempInfo{
+    width:37rem;
+    margin: auto;
+    max-height: 28rem;
+    background-color: rgb(4, 2, 19);
+    border-radius: 1rem;
+    /* padding: 1rem; */
+    font-family: "Robot",sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.top_layer{
+    width: 100%;
+    height: 5rem;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    
+}
+
+.top_layer p{
+    color: #fff;
+    font-weight: 300;
+    padding: 2rem;
+
+}
+
+.main_content{
+    width:90%;
+    height: 5rem;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.main_layer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.main_layer #city{
+    padding: 0.5rem 0;
+    color: #bfc1c8;
+    font-size: 2rem;
+    font-weight: 300;
+}
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa{
+    font-size: 4.3rem;
+    font-weight: 600;
+}
+
+.fa{
+    color: #4ec1e3;
+}
+
+sup{
+    font-size: 4.3rem;
+}
+
+.data_hide{
+    visibility: hidden;
+    transition: all 0.36 linear;
+}
+
+/* Temp input fields */
+.temp_form{
+    width: 28rem;
+    margin: auto;
+    position: relative;
+    /* margin-left:  2rem; */
+    margin-top: 2rem;
+}
+
+.temp_form input[type="text"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: #1e202b;
+    color:#ffff;
+    outline: none;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+}
+
+::placeholder{
+    color:#bfc1c8;
+}
+
+.temp_form input[type="submit"] {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: none;
+    background-color: #4ec1e3;
+    padding: 0 1rem;
+    border-radius: 3rem;
+    color:#fff;
+    border-radius: 4rem;
+    font-size: 2rem;
+}
+
+.temp_form input[type="submit"]:hover{
+    color:#4ec1e3;
+    background-color: #fff;
+}
+
+/* Template Details */
+.tempratureInfo{
+    width: 40rem;
+    margin: auto;
+    max-height: 25rem;
+    background-color: #323544;
+    border-radius: 1rem;
+    font-family: "Robot",sans-serif;
+    margin-bottom: 3rem;
+}
+
+.bottom_layer{
+    width: 100%;
+    height: 5rem;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;   
+}
+
+.bottom_layer p{
+    color: #fff;
+    font-weight: 300;
+    padding: 2rem;
+
+}
+
+/* footer code */
+footer {
+    width: 100%;
+     background-color: #1e272e;
+     /* height: fit-content; */
+     margin-top: auto;
+ }
+ footer p{
+     margin: 0;
+     text-align: center;
+     color: white;
+     line-height: 3rem;
+     font-size: 1.1rem;
+     background-color: #1e272e;
+ }
+
+ @media (max-width: 1000px) {
+    .tempratureInfo{
+        width: 33rem;
+    }
+    .bottom_layer p {
+        padding: 1rem;
+    }
+}
+
+ @media (max-width: 800px) {
+    .tempratureInfo{
+        width: 29rem;
+    }
+    .temp_form{
+        width: 23rem;
+    }
+    
+    .bottom_layer p {
+        padding: 0.5rem;
+    }
+}
+
+ @media (max-width: 550px) {
+    .tempratureInfo{
+        width: 26rem;
+    }
+    .temp_form{
+        width: 20rem;
+       
+
+    }
+    .temp_form input[type="text"] {
+        font-size: 1.2rem;
+    }
+    .temp_form input[type="submit"] {
+        font-size: 1.2rem;   
+    }
+}
+ @media (max-width: 460px) {
+    .tempratureInfo{
+        width: 21rem;
+        max-height: 28rem;
+    }
+    .main_layer .middle_layer p, .main_layer .middle_layer .fa {
+        font-size: 2.3rem;
+        font-weight: 500;
+    }
+    sup {
+        font-size: 2.3rem;
+        font-weight: 300;
+    }
+    .temp_form input[type="text"] {
+        font-size: 0.5rem;
+    }
+    .temp_form input[type="submit"] {
+        font-size: 0.5rem;   
+    }
+}
