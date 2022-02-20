@@ -98,10 +98,17 @@ app.post("/login", async(req,res) => {
             })
             
         }else{
-            res.send("Invalid Crediantials");
+            // res.send("Invalid Crediantials");
+            res.render('error',{
+                errormsg:'Invalid Credential!'
+            })
         }
     }catch(error){
-        res.status(400).send("Invalid Crediantials");
+        // res.status(400).send("Invalid Crediantials");
+
+        res.render('error',{
+            errormsg : error
+        })
     }
 });
 

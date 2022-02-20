@@ -93,3 +93,14 @@ mongoose.connect(DB_URL).then(() =>{
 }).catch((err) =>{
     console.log('connection Failed to DB');
 })
+
+// mongoose.connect(DB_URL, {
+    userNewUrlParser: true,
+    UserCreateIndex: true,
+    UseUnifiedTopology: true,
+    UseFindAndModify: false
+}).then(() =>{
+    console.log('connection sucessfull to DB');
+}).catch((err) =>{
+    console.log('connection Failed to DB');
+})
