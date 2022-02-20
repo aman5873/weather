@@ -51,5 +51,17 @@ MEN(excluding React)
 
 ///// GIT
 1. git init => initialize current directory
-2. git add / git add . => ad changes in working directory to the staging area.
-3. 
+2. git add -A / git add . => ad all changes in working directory to the staging area.
+3. git status => status
+4. git commit -m 'Initial Commit' => commit with message
+5. git branch -M main => Change to main branch
+6. git remote add origin https://github.com/aman5873/weather.git
+7. git push -u origin main
+
+///// Deploy NodeJs-express project on Heroku
+1. heroku -v => Check heroku version
+2. ls -al ~/.ssh => In git bash for checking ssh key/id
+3. "start" : "node src/app.js" => In package.json 
+4. heroku login
+5. heroku keys:add => (first time only) add ssh key to heroku to connect git to heroku cloud
+6. heroku create weather07-app => Create and initialize name of the app on heroku
