@@ -69,3 +69,27 @@ MEN(excluding React)
 4. git remote => show remote branch
 5. git push -u origin main => push commit on remote git
 6. git push -u heroku main => push commit of remote git-main to heroku-cloud
+
+
+
+
+//// MongoDB Arlas
+1. login
+2. create db/cluster free
+3. browse collection
+4. create DB, collection(table)
+5. create connection => username:aman; password:aman
+
+
+
+/// In app.js => DataBase connection
+// cluster : mongodb+srv://aman:<password>@cluster0.4s7yu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+   replace password and myFirstDatabase with password and DB_name
+
+const DB_URL = 'mongodb+srv://aman:aman@cluster0.4s7yu.mongodb.net/mernregister?retryWrites=true&w=majority'
+const mongoose = require('mongoose');
+mongoose.connect(DB_URL).then(() =>{
+    console.log('connection sucessfull to DB');
+}).catch((err) =>{
+    console.log('connection Failed to DB');
+})

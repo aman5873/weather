@@ -3,7 +3,17 @@ const app = express();  // All express functionality can be accesed Through app.
 
 const path = require("path");
 const hbs = require("hbs")
-require("./db/connect");
+
+/// DataBase connection
+const DB_URL = 'mongodb+srv://aman:aman@cluster0.4s7yu.mongodb.net/mernregister?retryWrites=true&w=majority'
+const mongoose = require('mongoose');
+mongoose.connect(DB_URL).then(() =>{
+    console.log('connection sucessfull to DB');
+}).catch((err) =>{
+    console.log('connection Failed to DB');
+})
+
+// require("./db/connect");
 const Register = require("./models/registers"); // Registerring model/table
 
 const port = process.env.PORT || 3000; // set port Number
