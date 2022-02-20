@@ -65,3 +65,7 @@ MEN(excluding React)
 4. heroku login
 5. heroku keys:add => (first time only) add ssh key to heroku to connect git to heroku cloud
 6. heroku create weather07-app => Create and initialize name of the app on heroku
+7. git status => status if unstage then (add, commit & push ) repetedly when any change occur
+4. git remote => show remote branch
+5. git push -u origin main => push commit on remote git
+6. git push -u heroku main => push commit of remote git-main to heroku-cloud
