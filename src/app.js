@@ -5,15 +5,8 @@ const path = require("path");
 const hbs = require("hbs")
 
 /// DataBase connection
-const DB_URL = 'mongodb+srv://aman:aman@cluster0.4s7yu.mongodb.net/mernregister?retryWrites=true&w=majority'
-const mongoose = require('mongoose');
-mongoose.connect(DB_URL).then(() =>{
-    console.log('connection sucessfull to DB');
-}).catch((err) =>{
-    console.log('connection Failed to DB');
-})
+require("./db/connect");
 
-// require("./db/connect");
 const Register = require("./models/registers"); // Registerring model/table
 
 const port = process.env.PORT || 3000; // set port Number
@@ -74,11 +67,16 @@ app.post("/register", async(req,res) => {
             res.status(201).redirect("/");
         }
         else{
-            res.send("Password are not matching");
+            // res.send("Password are not matching");
+            res.render('error2',{
+                errormsg:'Password are not matching!'
+            })
         }
     }catch(error){
-        res.status(400).send("Invalid Crediantials");
-        // alert("Bad Crediantals");
+        // res.status(400).send("Invalid Crediantials");
+        res.render('error2',{
+            errormsg:'E-mail already taken!'
+        })
     }
 });
 
@@ -99,15 +97,15 @@ app.post("/login", async(req,res) => {
             
         }else{
             // res.send("Invalid Crediantials");
-            res.render('error',{
-                errormsg:'Invalid Credential!'
+            res.render('error2',{
+                errormsg:'User not found!'
             })
         }
     }catch(error){
         // res.status(400).send("Invalid Crediantials");
 
-        res.render('error',{
-            errormsg : error
+        res.render('error2',{
+            errormsg : 'Invalid credientials!'
         })
     }
 });

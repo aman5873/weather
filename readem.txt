@@ -82,10 +82,10 @@ MEN(excluding React)
 
 
 
-/// In app.js => DataBase connection
+/// In app.js => DataBase connection Using mongoDB-Atlas
 // cluster : mongodb+srv://aman:<password>@cluster0.4s7yu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
    replace password and myFirstDatabase with password and DB_name
-
+<!--  
 const DB_URL = 'mongodb+srv://aman:aman@cluster0.4s7yu.mongodb.net/mernregister?retryWrites=true&w=majority'
 const mongoose = require('mongoose');
 mongoose.connect(DB_URL).then(() =>{
@@ -104,3 +104,4 @@ mongoose.connect(DB_URL).then(() =>{
 }).catch((err) =>{
     console.log('connection Failed to DB');
 })
+-->

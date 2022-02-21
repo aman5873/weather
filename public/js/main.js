@@ -32,7 +32,7 @@ const getInfo = async(event) =>{
             pressure.innerText = arrData[0].main.pressure;
             humidity.innerText = arrData[0].main.humidity;
             wind.innerText = arrData[0].wind.speed;
-            console.log(temp);
+            // console.log(temp);
             const  tempMood = arrData[0].weather[0].main;
             console.log(tempMood);
 
@@ -40,16 +40,23 @@ const getInfo = async(event) =>{
             // fafa weather icon
             if(tempMood === "Clear"){
                 temp_status.innerHTML = 
-                "<i class='fas fa-sun' arial-hidden='true' style='color:yellow ;'></i>";
+                "<img src='img/sun.png' alt='weather' class='w-img' >";
             }else if(tempMood === "Clouds"){
                 temp_status.innerHTML = 
-                "<i class='fas fa-cloud' arial-hidden='true' style='color:#4ec1e3 ;'></i>";
+                "<img src='img/clouds.png' alt='weather' class='w-img' >";
             }else if(tempMood === "Rain"){
                 temp_status.innerHTML = 
-                "<i class='fas fa-rain' arial-hidden='true' style='color:#4ec1e3 ;'></i>";
-            }else{
+                "<img src='img/rainy-day.png' alt='weather' class='w-img' >";
+            }else if(tempMood === "Haze"){
+                temp_status.innerHTML = 
+                "<img src='img/haze.png' alt='weather' class='w-img' >";
+            }else if(tempMood === "Smoke"){
+                temp_status.innerHTML = 
+                "<img src='img/smog.png' alt='weather' class='w-img' >";
+            }
+            else{
                  temp_status.innerHTML = 
-                "<i class='fas fa-cloud' arial-hidden='true' style='color:#4ec1e3 ;'></i>";
+                 "<img src='img/cloud_sun.png' alt='weather' class='w-img' >";
             }
             
             datahidem.classList.remove('data_hide'); //Remove class
