@@ -86,6 +86,7 @@ body{
 }
 .main_header_left button:hover{
     box-shadow: 0 18px 6px -6px var(--main-color) ;
+    background-color: #212529;
     color :#4ec1e3;
     
 }
@@ -372,3 +373,5 @@ footer {
     width:auto;
     height: 7rem;
 }
+
+  
